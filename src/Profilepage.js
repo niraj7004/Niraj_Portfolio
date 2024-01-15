@@ -10,6 +10,10 @@ import ProfilePic from './Assests/ProfilePic.jpg';
 function Profilepage() {
 
     const theme = createTheme({
+        typography: {
+            fontFamily: ['Poppins', 'sans-serif'
+            ].join(','),
+          },
         palette: {
             black: {
                 main: '#000000',
@@ -67,15 +71,17 @@ function Profilepage() {
 
     return (
         <ThemeProvider theme={theme}>
-            <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '100px' }}>
+            <Box sx={{display:['block', 'block','flex'], justifyContent: 'center', paddingY: '80px' }}>
+                <Stack sx={{alignItems:'center', paddingY: [2, 2, 0]}}>
                 <Avatar
                     alt="Profile Picture"
                     src={ProfilePic}
                     sx={{ width: 300, height: 300 }}
                 />
+                </Stack>
                 <Stack spacing={1} sx={{ alignItems: 'center', justifyContent: 'center', paddingX: '60px' }}>
                     <Typography variant="body1" sx={{ color: 'grey' }} fontWeight={800}>Hello, I'm</Typography>
-                    <Typography variant="h3" fontSize={40} fontWeight={600}>Patel Niraj Kumar</Typography>
+                    <Typography variant="h3" fontWeight={600} sx={{ fontSize: [30, 38, 40] }}>Patel Niraj Kumar</Typography>
                     <Typography variant="h5" fontSize={20} sx={{ color: '#737373' }} fontWeight={800}>{text}</Typography>
                     <Box padding={1.5}>
                         <Button color='black' sx={{ borderRadius: '25px', }}

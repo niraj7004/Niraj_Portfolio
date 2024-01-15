@@ -25,7 +25,7 @@ function Projectpage() {
     return (
         <div id='project'>
         <ThemeProvider theme={theme}>
-            <Box padding='150px'>
+            <Box sx={{ paddingX: [5, 10, 20], }} paddingY='75px'>
                 <Stack spacing={4}>
                     <Stack alignItems='center'>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -35,8 +35,8 @@ function Projectpage() {
                             Projects
                         </Typography>
                     </Stack>
-                    <Stack direction='row' spacing={2}>
-                        <Card variant="outlined" sx={{ maxWidth: 345 }}>
+                    <Box sx={{display:['block','block','flex']}} justifyContent='center'>
+                        <Card variant="outlined" sx={{ m:1, maxWidth: 345 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image={DroneImage}
@@ -62,7 +62,7 @@ function Projectpage() {
                                 </Button>
                             </CardActions>
                         </Card>
-                        <Card variant="outlined" sx={{ maxWidth: 345 }}>
+                        <Card variant="outlined" sx={{ m:1, maxWidth: 345 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image={MedicalImage}
@@ -88,7 +88,7 @@ function Projectpage() {
                                 </Button>
                             </CardActions>
                         </Card>
-                        <Card variant="outlined" sx={{ maxWidth: 345 }}>
+                        <Card variant="outlined" sx={{ m:1, maxWidth: 345 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image={ApplicationImage}
@@ -110,7 +110,7 @@ function Projectpage() {
                                 </Typography>
                             </CardContent>
                         </Card>
-                    </Stack>
+                    </Box>
                 </Stack>
             </Box>
         </ThemeProvider>

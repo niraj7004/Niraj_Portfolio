@@ -1,14 +1,30 @@
 import * as React from 'react';
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 function Skillpage() {
+    const theme = createTheme({
+        typography: {
+            fontFamily: ['Poppins', 'sans-serif'
+            ].join(','),
+        },
+        palette: {
+            black: {
+                main: '#000000',
+                light: '#000000',
+                dark: '#000000',
+                contrastText: '#ffffff',
+            },
+        },
+    });
+
     return (
         <div id='skill'>
-            <Box>
-                <Stack spacing={4}>
+            <ThemeProvider theme={theme}>
+                <Box sx={{ paddingX: [5, 10, 20], }} paddingY='75px'>
                     <Stack alignItems='center'>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                             Explore My
@@ -17,8 +33,8 @@ function Skillpage() {
                             Skills
                         </Typography>
                     </Stack>
-                    <Stack direction='row' spacing={2} justifyContent='center'>
-                        <Card variant="outlined">
+                    <Box sx={{display:['block','block','flex']}} justifyContent='center'>
+                        <Card sx={{m:1}} variant="outlined">
                             <React.Fragment>
                                 <CardContent>
                                     <Stack direction='row' justifyContent='center'>
@@ -27,9 +43,8 @@ function Skillpage() {
                                             Programming
                                         </Typography>
                                     </Stack>
-                                    <Stack direction='row' spacing={4} sx={{ paddingX: '45px' }}>
-                                        {/* <Stack direction='row' spacing={12}> */}
-                                        <Stack>
+                                    <Box sx={{ display:['block','block','block','flex'], paddingX: '45px' }}>
+                                        <Stack sx={{m:1}}>
                                             <Typography color="text.secondary">
                                                 Language
                                             </Typography>
@@ -41,7 +56,7 @@ function Skillpage() {
                                                 <Stack direction='row' sx={{ paddingY: '5px' }}><VerifiedIcon fontSize='small' sx={{ paddingRight: '15px' }} /> JavaScript </Stack>
                                             </Typography>
                                         </Stack>
-                                        <Stack>
+                                        <Stack sx={{m:1}}>
                                             <Typography color="text.secondary">
                                                 Frameworks & Tools
                                             </Typography>
@@ -54,9 +69,7 @@ function Skillpage() {
                                                 <Stack direction='row' sx={{ paddingY: '5px' }}><VerifiedIcon fontSize='small' sx={{ paddingRight: '15px' }} />VsCode </Stack>
                                             </Typography>
                                         </Stack>
-                                        {/* </Stack> */}
-                                        {/* <Stack direction='row' spacing={10.5}> */}
-                                        <Stack>
+                                        <Stack sx={{m:1}}>
                                             <Typography color="text.secondary">
                                                 Operating System
                                             </Typography>
@@ -65,7 +78,7 @@ function Skillpage() {
                                                 <Stack direction='row' sx={{ paddingY: '5px' }}><VerifiedIcon fontSize='small' sx={{ paddingRight: '15px' }} />Window </Stack>
                                             </Typography>
                                         </Stack>
-                                        <Stack>
+                                        <Stack sx={{m:1}}>
                                             <Typography color="text.secondary">
                                                 Database
                                             </Typography>
@@ -74,12 +87,11 @@ function Skillpage() {
                                                 <Stack direction='row' sx={{ paddingY: '5px' }}><VerifiedIcon fontSize='small' sx={{ paddingRight: '15px' }} />MongoDB </Stack>
                                             </Typography>
                                         </Stack>
-                                        {/* </Stack> */}
-                                    </Stack>
+                                    </Box>
                                 </CardContent>
                             </React.Fragment>
                         </Card>
-                        <Card variant="outlined">
+                        <Card sx={{m:1}} variant="outlined">
                             <React.Fragment>
                                 <CardContent>
                                     <Stack direction='row' justifyContent='center'>
@@ -105,9 +117,9 @@ function Skillpage() {
                                 </CardContent>
                             </React.Fragment>
                         </Card>
-                    </Stack>
-                </Stack>
-            </Box>
+                    </Box>
+                </Box>
+            </ThemeProvider>
         </div>
     );
 }

@@ -22,7 +22,7 @@ function Experiencepage() {
     return (
         <div id='experience'>
             <ThemeProvider theme={theme}>
-                <Box paddingX='150px'>
+                <Box sx={{ paddingX: [5, 10, 20], }} paddingY='75px'>
                     <Stack spacing={4}>
                         <Stack alignItems='center'>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -32,8 +32,8 @@ function Experiencepage() {
                                 Experience
                             </Typography>
                         </Stack>
-                        <Stack>
-                            <Card variant="outlined" sx={{ minWidth: 275}}>
+                        <Box sx={{display:['block','block', 'flex']}} justifyContent='center'>
+                            <Card variant="outlined" sx={{ m:1, minWidth: 275}}>
                                 <CardContent>
                                     <Typography variant="h5" component="div">
                                         2LC Technologies
@@ -54,7 +54,7 @@ function Experiencepage() {
                                     </Button>
                                 </CardActions>
                             </Card>
-                        </Stack>
+                        </Box>
                     </Stack>
                 </Box>
             </ThemeProvider>
