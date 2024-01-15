@@ -33,7 +33,7 @@ function Aboutpage() {
                             About Me
                         </Typography>
                     </Stack>
-                    <Typography sx={{ textAlign: 'justify', padding: '20px 0px 30px 0px' }}>Hey everyone! I'm a passionate computer science student at NIT Uttarakhand, fueled by the thrill of problem-solving and building things that matter. I'm always down to learn new skills and explore the endless possibilities of tech.</Typography>
+                    <Typography sx={{ textAlign: 'justify', padding: '20px 0px 30px 0px' }}>Hi! I'm a passionate computer science student at NIT Uttarakhand, fueled by the thrill of problem-solving and building things that matter. I'm always down to learn new skills and explore the endless possibilities of tech.</Typography>
                     <Box sx={{display:['block', 'block', 'flex']}} justifyContent='center' >
                         <Card sx={{m:1}} variant="outlined">
                             <React.Fragment>

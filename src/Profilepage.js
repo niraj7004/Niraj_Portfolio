@@ -81,7 +81,7 @@ function Profilepage() {
                 </Stack>
                 <Stack spacing={1} sx={{ alignItems: 'center', justifyContent: 'center', paddingX: '60px' }}>
                     <Typography variant="body1" sx={{ color: 'grey' }} fontWeight={800}>Hello, I'm</Typography>
-                    <Typography variant="h3" fontWeight={600} sx={{ fontSize: [30, 38, 40] }}>Patel Niraj Kumar</Typography>
+                    <Typography variant="h3" fontWeight={600} sx={{ fontSize: [28, 38, 40] }}>Patel Niraj Kumar</Typography>
                     <Typography variant="h5" fontSize={20} sx={{ color: '#737373' }} fontWeight={800}>{text}</Typography>
                     <Box padding={1.5}>
                         <Button color='black' sx={{ borderRadius: '25px', }}
