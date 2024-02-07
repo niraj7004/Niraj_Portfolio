@@ -88,7 +88,7 @@ function Profilepage() {
                             variant={isHovered ? "contained" : "outlined"}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
-                            href='https://drive.google.com/file/d/11Nh2ACIs_mrVDlZIZ2f0V4Gh7HBedOuP/view?usp=sharing'
+                            href='https://drive.google.com/file/d/1kOfuLVvYpIwHVMQOG0brqg1kAxAecib2/view?usp=drive_link'
                             target='_blank'
                         >
                             Download CV
